@@ -1,0 +1,17 @@
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро_технической_инвентаризации.frmMain.resources
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро технической инвентаризации.vbproj.GenerateResource.cache
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро технической инвентаризации.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро технической инвентаризации.AssemblyInfoInputs.cache
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро технической инвентаризации.AssemblyInfo.vb
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро технической инвентаризации.vbproj.CoreCompileInputs.cache
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\bin\Debug\net8.0-windows\Бюро технической инвентаризации.exe
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\bin\Debug\net8.0-windows\Бюро технической инвентаризации.deps.json
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\bin\Debug\net8.0-windows\Бюро технической инвентаризации.runtimeconfig.json
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\bin\Debug\net8.0-windows\Бюро технической инвентаризации.dll
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\bin\Debug\net8.0-windows\Бюро технической инвентаризации.pdb
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро технической инвентаризации.dll
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\refint\Бюро технической инвентаризации.dll
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро технической инвентаризации.pdb
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро технической инвентаризации.genruntimeconfig.cache
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\ref\Бюро технической инвентаризации.dll
+C:\Users\Maria\source\repos\Бюро технической инвентаризации\obj\Debug\net8.0-windows\Бюро_технической_инвентаризации.Resources.resources

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Бюро технической инвентаризации/1.0.0": {
+        "runtime": {
+          "Бюро технической инвентаризации.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Бюро технической инвентаризации/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
