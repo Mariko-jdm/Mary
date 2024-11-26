@@ -22,22 +22,26 @@ Partial Class frmMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        components = New ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         MenuStrip1 = New MenuStrip()
-        ФайлToolStripMenuItem = New ToolStripMenuItem()
+        file = New ToolStripMenuItem()
         ОткрытьToolStripMenuItem = New ToolStripMenuItem()
         СохранитьToolStripMenuItem = New ToolStripMenuItem()
+        ИмпортToolStripMenuItem = New ToolStripMenuItem()
         ВыходToolStripMenuItem = New ToolStripMenuItem()
-        ПравкаToolStripMenuItem = New ToolStripMenuItem()
-        ВидToolStripMenuItem = New ToolStripMenuItem()
+        correction = New ToolStripMenuItem()
+        view = New ToolStripMenuItem()
         ПанельИнструментовToolStripMenuItem = New ToolStripMenuItem()
         СтандартнаяToolStripMenuItem = New ToolStripMenuItem()
         СтрокаСостоянияToolStripMenuItem = New ToolStripMenuItem()
-        ФорматToolStripMenuItem = New ToolStripMenuItem()
+        format = New ToolStripMenuItem()
         ШрифтToolStripMenuItem = New ToolStripMenuItem()
         ЦветToolStripMenuItem = New ToolStripMenuItem()
-        СправочникиToolStripMenuItem = New ToolStripMenuItem()
-        СправкаToolStripMenuItem = New ToolStripMenuItem()
+        references = New ToolStripMenuItem()
+        CToolStripMenuItem = New ToolStripMenuItem()
+        help = New ToolStripMenuItem()
+        ОПрограммеToolStripMenuItem = New ToolStripMenuItem()
         ToolStrip1 = New ToolStrip()
         СоздатьToolStripButton = New ToolStripButton()
         ОткрытьToolStripButton = New ToolStripButton()
@@ -49,10 +53,15 @@ Partial Class frmMain
         ВставитьToolStripButton = New ToolStripButton()
         toolStripSeparator1 = New ToolStripSeparator()
         СправкаToolStripButton = New ToolStripButton()
+        ToolStripSeparator2 = New ToolStripSeparator()
+        ДобавитьЗаписьToolStripButton = New ToolStripButton()
+        ИзменитьЗаписьToolStripButton = New ToolStripButton()
+        УдалитьЗаписьToolStripButton = New ToolStripButton()
         StatusStrip1 = New StatusStrip()
-        DateTime = New ToolStripStatusLabel()
+        Date_and_Time = New ToolStripStatusLabel()
         UserName = New ToolStripStatusLabel()
         ToolStripProgressBar1 = New ToolStripProgressBar()
+        Timer1 = New Timer(components)
         MenuStrip1.SuspendLayout()
         ToolStrip1.SuspendLayout()
         StatusStrip1.SuspendLayout()
@@ -60,19 +69,20 @@ Partial Class frmMain
         ' 
         ' MenuStrip1
         ' 
-        MenuStrip1.Items.AddRange(New ToolStripItem() {ФайлToolStripMenuItem, ПравкаToolStripMenuItem, ВидToolStripMenuItem, ФорматToolStripMenuItem, СправочникиToolStripMenuItem, СправкаToolStripMenuItem})
+        MenuStrip1.Items.AddRange(New ToolStripItem() {file, correction, view, format, references, help})
         MenuStrip1.Location = New Point(0, 0)
         MenuStrip1.Name = "MenuStrip1"
-        MenuStrip1.Size = New Size(905, 24)
+        MenuStrip1.Size = New Size(979, 24)
         MenuStrip1.TabIndex = 1
         MenuStrip1.Text = "MenuStrip1"
         ' 
-        ' ФайлToolStripMenuItem
+        ' file
         ' 
-        ФайлToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ОткрытьToolStripMenuItem, СохранитьToolStripMenuItem, ВыходToolStripMenuItem})
-        ФайлToolStripMenuItem.Name = "ФайлToolStripMenuItem"
-        ФайлToolStripMenuItem.Size = New Size(51, 20)
-        ФайлToolStripMenuItem.Text = " Файл"
+        file.DropDownItems.AddRange(New ToolStripItem() {ОткрытьToolStripMenuItem, СохранитьToolStripMenuItem, ИмпортToolStripMenuItem, ВыходToolStripMenuItem})
+        file.Name = "file"
+        file.ShortcutKeys = Keys.Shift Or Keys.F1
+        file.Size = New Size(51, 20)
+        file.Text = " Файл"
         ' 
         ' ОткрытьToolStripMenuItem
         ' 
@@ -90,6 +100,14 @@ Partial Class frmMain
         СохранитьToolStripMenuItem.Size = New Size(188, 22)
         СохранитьToolStripMenuItem.Text = "Сохранить..."
         ' 
+        ' ИмпортToolStripMenuItem
+        ' 
+        ИмпортToolStripMenuItem.Image = CType(resources.GetObject("ИмпортToolStripMenuItem.Image"), Image)
+        ИмпортToolStripMenuItem.Name = "ИмпортToolStripMenuItem"
+        ИмпортToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F8
+        ИмпортToolStripMenuItem.Size = New Size(188, 22)
+        ИмпортToolStripMenuItem.Text = "Импорт..."
+        ' 
         ' ВыходToolStripMenuItem
         ' 
         ВыходToolStripMenuItem.Image = CType(resources.GetObject("ВыходToolStripMenuItem.Image"), Image)
@@ -98,18 +116,20 @@ Partial Class frmMain
         ВыходToolStripMenuItem.Size = New Size(188, 22)
         ВыходToolStripMenuItem.Text = "Выход"
         ' 
-        ' ПравкаToolStripMenuItem
+        ' correction
         ' 
-        ПравкаToolStripMenuItem.Name = "ПравкаToolStripMenuItem"
-        ПравкаToolStripMenuItem.Size = New Size(59, 20)
-        ПравкаToolStripMenuItem.Text = "Правка"
+        correction.Name = "correction"
+        correction.ShortcutKeys = Keys.Shift Or Keys.F2
+        correction.Size = New Size(59, 20)
+        correction.Text = "Правка"
         ' 
-        ' ВидToolStripMenuItem
+        ' view
         ' 
-        ВидToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ПанельИнструментовToolStripMenuItem, СтрокаСостоянияToolStripMenuItem})
-        ВидToolStripMenuItem.Name = "ВидToolStripMenuItem"
-        ВидToolStripMenuItem.Size = New Size(39, 20)
-        ВидToolStripMenuItem.Text = "Вид"
+        view.DropDownItems.AddRange(New ToolStripItem() {ПанельИнструментовToolStripMenuItem, СтрокаСостоянияToolStripMenuItem})
+        view.Name = "view"
+        view.ShortcutKeys = Keys.Shift Or Keys.F3
+        view.Size = New Size(39, 20)
+        view.Text = "Вид"
         ' 
         ' ПанельИнструментовToolStripMenuItem
         ' 
@@ -125,7 +145,7 @@ Partial Class frmMain
         СтандартнаяToolStripMenuItem.Checked = True
         СтандартнаяToolStripMenuItem.CheckState = CheckState.Checked
         СтандартнаяToolStripMenuItem.Name = "СтандартнаяToolStripMenuItem"
-        СтандартнаяToolStripMenuItem.Size = New Size(180, 22)
+        СтандартнаяToolStripMenuItem.Size = New Size(143, 22)
         СтандартнаяToolStripMenuItem.Text = "Стандартная"
         ' 
         ' СтрокаСостоянияToolStripMenuItem
@@ -138,19 +158,20 @@ Partial Class frmMain
         СтрокаСостоянияToolStripMenuItem.Size = New Size(242, 22)
         СтрокаСостоянияToolStripMenuItem.Text = "Строка состояния"
         ' 
-        ' ФорматToolStripMenuItem
+        ' format
         ' 
-        ФорматToolStripMenuItem.DropDownItems.AddRange(New ToolStripItem() {ШрифтToolStripMenuItem, ЦветToolStripMenuItem})
-        ФорматToolStripMenuItem.Name = "ФорматToolStripMenuItem"
-        ФорматToolStripMenuItem.Size = New Size(62, 20)
-        ФорматToolStripMenuItem.Text = "Формат"
+        format.DropDownItems.AddRange(New ToolStripItem() {ШрифтToolStripMenuItem, ЦветToolStripMenuItem})
+        format.Name = "format"
+        format.ShortcutKeys = Keys.Shift Or Keys.F4
+        format.Size = New Size(62, 20)
+        format.Text = "Формат"
         ' 
         ' ШрифтToolStripMenuItem
         ' 
         ШрифтToolStripMenuItem.Image = CType(resources.GetObject("ШрифтToolStripMenuItem.Image"), Image)
         ШрифтToolStripMenuItem.Name = "ШрифтToolStripMenuItem"
         ШрифтToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F6
-        ШрифтToolStripMenuItem.Size = New Size(180, 22)
+        ШрифтToolStripMenuItem.Size = New Size(168, 22)
         ШрифтToolStripMenuItem.Text = "Шрифт..."
         ' 
         ' ЦветToolStripMenuItem
@@ -158,27 +179,43 @@ Partial Class frmMain
         ЦветToolStripMenuItem.Image = CType(resources.GetObject("ЦветToolStripMenuItem.Image"), Image)
         ЦветToolStripMenuItem.Name = "ЦветToolStripMenuItem"
         ЦветToolStripMenuItem.ShortcutKeys = Keys.Control Or Keys.F7
-        ЦветToolStripMenuItem.Size = New Size(180, 22)
+        ЦветToolStripMenuItem.Size = New Size(168, 22)
         ЦветToolStripMenuItem.Text = "Цвет..."
         ' 
-        ' СправочникиToolStripMenuItem
+        ' references
         ' 
-        СправочникиToolStripMenuItem.Name = "СправочникиToolStripMenuItem"
-        СправочникиToolStripMenuItem.Size = New Size(94, 20)
-        СправочникиToolStripMenuItem.Text = "Справочники"
+        references.DropDownItems.AddRange(New ToolStripItem() {CToolStripMenuItem})
+        references.Name = "references"
+        references.ShortcutKeys = Keys.Shift Or Keys.F5
+        references.Size = New Size(94, 20)
+        references.Text = "Справочники"
         ' 
-        ' СправкаToolStripMenuItem
+        ' CToolStripMenuItem
         ' 
-        СправкаToolStripMenuItem.Name = "СправкаToolStripMenuItem"
-        СправкаToolStripMenuItem.Size = New Size(65, 20)
-        СправкаToolStripMenuItem.Text = "Справка"
+        CToolStripMenuItem.Name = "CToolStripMenuItem"
+        CToolStripMenuItem.Size = New Size(149, 22)
+        CToolStripMenuItem.Text = "Сотрудники..."
+        ' 
+        ' help
+        ' 
+        help.DropDownItems.AddRange(New ToolStripItem() {ОПрограммеToolStripMenuItem})
+        help.Name = "help"
+        help.ShortcutKeys = Keys.Shift Or Keys.F6
+        help.Size = New Size(65, 20)
+        help.Text = "Справка"
+        ' 
+        ' ОПрограммеToolStripMenuItem
+        ' 
+        ОПрограммеToolStripMenuItem.Name = "ОПрограммеToolStripMenuItem"
+        ОПрограммеToolStripMenuItem.Size = New Size(158, 22)
+        ОПрограммеToolStripMenuItem.Text = "О программе..."
         ' 
         ' ToolStrip1
         ' 
-        ToolStrip1.Items.AddRange(New ToolStripItem() {СоздатьToolStripButton, ОткрытьToolStripButton, СохранитьToolStripButton, ПечатьToolStripButton, toolStripSeparator, ВырезатьToolStripButton, КопироватьToolStripButton, ВставитьToolStripButton, toolStripSeparator1, СправкаToolStripButton})
+        ToolStrip1.Items.AddRange(New ToolStripItem() {СоздатьToolStripButton, ОткрытьToolStripButton, СохранитьToolStripButton, ПечатьToolStripButton, toolStripSeparator, ВырезатьToolStripButton, КопироватьToolStripButton, ВставитьToolStripButton, toolStripSeparator1, СправкаToolStripButton, ToolStripSeparator2, ДобавитьЗаписьToolStripButton, ИзменитьЗаписьToolStripButton, УдалитьЗаписьToolStripButton})
         ToolStrip1.Location = New Point(0, 24)
         ToolStrip1.Name = "ToolStrip1"
-        ToolStrip1.Size = New Size(905, 25)
+        ToolStrip1.Size = New Size(979, 25)
         ToolStrip1.TabIndex = 3
         ToolStrip1.Text = "ToolStrip1"
         ' 
@@ -264,20 +301,52 @@ Partial Class frmMain
         СправкаToolStripButton.Size = New Size(23, 22)
         СправкаToolStripButton.Text = "С&правка"
         ' 
+        ' ToolStripSeparator2
+        ' 
+        ToolStripSeparator2.Name = "ToolStripSeparator2"
+        ToolStripSeparator2.Size = New Size(6, 25)
+        ' 
+        ' ДобавитьЗаписьToolStripButton
+        ' 
+        ДобавитьЗаписьToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ДобавитьЗаписьToolStripButton.Image = CType(resources.GetObject("ДобавитьЗаписьToolStripButton.Image"), Image)
+        ДобавитьЗаписьToolStripButton.ImageTransparentColor = Color.Magenta
+        ДобавитьЗаписьToolStripButton.Name = "ДобавитьЗаписьToolStripButton"
+        ДобавитьЗаписьToolStripButton.Size = New Size(23, 22)
+        ДобавитьЗаписьToolStripButton.Text = "ToolStripButton1"
+        ' 
+        ' ИзменитьЗаписьToolStripButton
+        ' 
+        ИзменитьЗаписьToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        ИзменитьЗаписьToolStripButton.Image = CType(resources.GetObject("ИзменитьЗаписьToolStripButton.Image"), Image)
+        ИзменитьЗаписьToolStripButton.ImageTransparentColor = Color.Magenta
+        ИзменитьЗаписьToolStripButton.Name = "ИзменитьЗаписьToolStripButton"
+        ИзменитьЗаписьToolStripButton.Size = New Size(23, 22)
+        ИзменитьЗаписьToolStripButton.Text = "ToolStripButton2"
+        ' 
+        ' УдалитьЗаписьToolStripButton
+        ' 
+        УдалитьЗаписьToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image
+        УдалитьЗаписьToolStripButton.Image = CType(resources.GetObject("УдалитьЗаписьToolStripButton.Image"), Image)
+        УдалитьЗаписьToolStripButton.ImageTransparentColor = Color.Magenta
+        УдалитьЗаписьToolStripButton.Name = "УдалитьЗаписьToolStripButton"
+        УдалитьЗаписьToolStripButton.Size = New Size(23, 22)
+        УдалитьЗаписьToolStripButton.Text = "ToolStripButton3"
+        ' 
         ' StatusStrip1
         ' 
-        StatusStrip1.Items.AddRange(New ToolStripItem() {DateTime, UserName, ToolStripProgressBar1})
-        StatusStrip1.Location = New Point(0, 526)
+        StatusStrip1.Items.AddRange(New ToolStripItem() {Date_and_Time, UserName, ToolStripProgressBar1})
+        StatusStrip1.Location = New Point(0, 558)
         StatusStrip1.Name = "StatusStrip1"
-        StatusStrip1.Size = New Size(905, 22)
+        StatusStrip1.Size = New Size(979, 22)
         StatusStrip1.TabIndex = 4
         StatusStrip1.Text = "StatusStrip1"
         ' 
-        ' DateTime
+        ' Date_and_Time
         ' 
-        DateTime.Name = "DateTime"
-        DateTime.Size = New Size(79, 17)
-        DateTime.Text = "Дата и время"
+        Date_and_Time.Name = "Date_and_Time"
+        Date_and_Time.Size = New Size(79, 17)
+        Date_and_Time.Text = "Дата и время"
         ' 
         ' UserName
         ' 
@@ -290,20 +359,26 @@ Partial Class frmMain
         ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         ToolStripProgressBar1.Size = New Size(100, 16)
         ' 
+        ' Timer1
+        ' 
+        ' 
         ' frmMain
         ' 
         AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Size(905, 548)
+        ClientSize = New Size(979, 580)
         Controls.Add(StatusStrip1)
         Controls.Add(ToolStrip1)
         Controls.Add(MenuStrip1)
+        FormBorderStyle = FormBorderStyle.FixedDialog
         Icon = CType(resources.GetObject("$this.Icon"), Icon)
         IsMdiContainer = True
         MainMenuStrip = MenuStrip1
+        MaximizeBox = False
+        MinimizeBox = False
         Name = "frmMain"
         StartPosition = FormStartPosition.CenterScreen
-        Text = "Form1"
+        Text = "Бюро технической инвентаризации"
         MenuStrip1.ResumeLayout(False)
         MenuStrip1.PerformLayout()
         ToolStrip1.ResumeLayout(False)
@@ -315,17 +390,17 @@ Partial Class frmMain
     End Sub
 
     Friend WithEvents MenuStrip1 As MenuStrip
-    Friend WithEvents ФайлToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ПравкаToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ВидToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ФорматToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents СправочникиToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents СправкаToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents file As ToolStripMenuItem
+    Friend WithEvents correction As ToolStripMenuItem
+    Friend WithEvents view As ToolStripMenuItem
+    Friend WithEvents format As ToolStripMenuItem
+    Friend WithEvents references As ToolStripMenuItem
+    Friend WithEvents help As ToolStripMenuItem
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents ОткрытьToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents СохранитьToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StatusStrip1 As StatusStrip
-    Friend WithEvents DateTime As ToolStripStatusLabel
+    Friend WithEvents Date_and_Time As ToolStripStatusLabel
     Friend WithEvents UserName As ToolStripStatusLabel
     Friend WithEvents ToolStripProgressBar1 As ToolStripProgressBar
     Friend WithEvents ВыходToolStripMenuItem As ToolStripMenuItem
@@ -344,5 +419,13 @@ Partial Class frmMain
     Friend WithEvents ВставитьToolStripButton As ToolStripButton
     Friend WithEvents toolStripSeparator1 As ToolStripSeparator
     Friend WithEvents СправкаToolStripButton As ToolStripButton
+    Friend WithEvents ОПрограммеToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ИмпортToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents CToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents ДобавитьЗаписьToolStripButton As ToolStripButton
+    Friend WithEvents ИзменитьЗаписьToolStripButton As ToolStripButton
+    Friend WithEvents УдалитьЗаписьToolStripButton As ToolStripButton
 
 End Class

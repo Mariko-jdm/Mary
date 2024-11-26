@@ -1,0 +1,26 @@
+[
+  {
+    "strFam": "\u0421\u043C\u0438\u0440\u043D\u043E\u0432\u0430",
+    "strImya": "\u041D\u0430\u0442\u0430\u043B\u044C\u044F",
+    "strOtch": "\u042E\u0440\u044C\u0435\u0432\u043D\u0430",
+    "bolSex": false,
+    "strSeria": "4587",
+    "strNumber": "24545",
+    "strBankNum": "6548657897964",
+    "strEndDate": "10.11.2025",
+    "Gender": "Female",
+    "FullName": "\u0421\u043C\u0438\u0440\u043D\u043E\u0432\u0430 \u041D\u0430\u0442\u0430\u043B\u044C\u044F \u042E\u0440\u044C\u0435\u0432\u043D\u0430"
+  },
+  {
+    "strFam": "\u0412\u043E\u043B\u043A\u043E\u0432",
+    "strImya": "\u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440",
+    "strOtch": "\u042E\u0440\u044C\u0435\u0432\u0438\u0447",
+    "bolSex": false,
+    "strSeria": "4587",
+    "strNumber": "545878",
+    "strBankNum": "57555442",
+    "strEndDate": "15.08.2025",
+    "Gender": "Male",
+    "FullName": "\u0412\u043E\u043B\u043A\u043E\u0432 \u0410\u043B\u0435\u043A\u0441\u0430\u043D\u0434\u0440 \u042E\u0440\u044C\u0435\u0432\u0438\u0447"
+  }
+]

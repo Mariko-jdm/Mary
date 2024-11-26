@@ -16,7 +16,7 @@ Imports System.Reflection
 <Assembly: System.Reflection.AssemblyCompanyAttribute("Бюро технической инвентаризации"),  _
  Assembly: System.Reflection.AssemblyConfigurationAttribute("Debug"),  _
  Assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0"),  _
- Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0"),  _
+ Assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f77630929bc92815c368883ad55fc3c84003d877"),  _
  Assembly: System.Reflection.AssemblyProductAttribute("Бюро технической инвентаризации"),  _
  Assembly: System.Reflection.AssemblyTitleAttribute("Бюро технической инвентаризации"),  _
  Assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0"),  _

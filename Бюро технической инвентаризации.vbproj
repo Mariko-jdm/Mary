@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <RootNamespace>Бюро_технической_инвентаризации</RootNamespace>
-    <StartupObject>Sub Main</StartupObject>
+    <StartupObject>Бюро_технической_инвентаризации.My.MyApplication</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
