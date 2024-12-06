@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Maria\\source\\repos\\Бюро технической инвентаризации\\Бюро технической инвентаризации.vbproj",
+      "projectUniqueName": "C:\\Users\\Maria\\Documents\\GitHub\\Mary\\Бюро технической инвентаризации.vbproj",
       "projectName": "Бюро технической инвентаризации",
-      "projectPath": "C:\\Users\\Maria\\source\\repos\\Бюро технической инвентаризации\\Бюро технической инвентаризации.vbproj",
+      "projectPath": "C:\\Users\\Maria\\Documents\\GitHub\\Mary\\Бюро технической инвентаризации.vbproj",
       "packagesPath": "C:\\Users\\Maria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Maria\\source\\repos\\Бюро технической инвентаризации\\obj\\",
+      "outputPath": "C:\\Users\\Maria\\Documents\\GitHub\\Mary\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
